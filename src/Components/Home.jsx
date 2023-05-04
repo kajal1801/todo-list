@@ -6,6 +6,7 @@ const Home = () => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
+  // Submit Tasks
   const submitHandler = (e) => {
     e.preventDefault()
     if(title !== '' && description !== ''){
@@ -18,11 +19,21 @@ const Home = () => {
     }
   }
 
+  // Delete Tasks
   const deleteTask = (index) => {
     const filterTasks = tasks.filter((item, i) => i !== index)
     setTasks(filterTasks)
   }
 
+  // Edit Tasks 
+  const editTask = (index) => {
+    const newTasks = [...tasks]
+    newTasks[index].title = prompt('Enter new title', newTasks[index].title)
+    newTasks[index].description = prompt('Enter new description', newTasks[index].description)
+    setTasks(newTasks)
+  }
+
+  // Save to Local Storage
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
@@ -55,6 +66,7 @@ const Home = () => {
           title={item.title}
           description={item.description}
           deleteTask={deleteTask}
+          editTask={editTask}
           index={index}
         />
       ))}

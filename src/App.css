@@ -50,7 +50,7 @@ textarea,
   padding: 10px;
   border: 1px solid #0000002a;
   border-radius: 5px;
-  margin: 5px;
+  margin: 5px 0;
 }
 
 input:focus,
@@ -101,7 +101,13 @@ textarea {
   margin-top: 5px;
 }
 
-#trash {
+.task-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update {
   color: #000;
   margin: 5px 0;
   border: none;
@@ -113,7 +119,16 @@ textarea {
   align-items: center;
 }
 
+#edit{
+  margin-left: 10px;
+}
+
 #trash:hover {
   color: rgba(221, 0, 0, 0.941);
+  transition: 0.3s ease-in-out;
+}
+
+#edit:hover {
+  color: #0093b8;
   transition: 0.3s ease-in-out;
 }
