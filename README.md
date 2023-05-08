@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Todo List React App
+
+Live link of this project: [https://react-manager-list.netlify.app/](https://react-manager-list.netlify.app/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
